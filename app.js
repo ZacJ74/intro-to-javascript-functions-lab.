@@ -56,7 +56,7 @@ Complete the exercise in the space below:
 */
 
 const isCharAVowel = (char) => {
-  const vowels = 'aeiouAEIOU';
+  const vowels = 'aeiou';
   return vowels.includes(char);
 }
 
@@ -92,11 +92,11 @@ Example: greetUser('Sam', 'morning') should return "Good morning, Sam!"
 Complete the exercise in the space below:
 */
 
-const greetUser = (Zac, morning) => {
-  return `Good ${morning}, ${Zac}!`;
+const greetUser = (Zac, afternoon) => {
+  return `Good ${afternoon}, ${Zac}!`;
 }
 
-console.log('Exercise 5 Result:', greetUser("Zac", "morning"));
+console.log('Exercise 5 Result:', greetUser("Zac", "afternoon"));
 
 /*
 Exercise 6: maxOfThree()
@@ -156,7 +156,7 @@ const convertTemperature = (temp, scale) => {
     return 'Invalid scale'; 
   }
 }
-
+console.log('Exercise 8 Result:', convertTemperature(32, "F"));
 console.log('Exercise 8 Result:', convertTemperature(32, "C"));
 
 
@@ -178,18 +178,31 @@ Complete the exercise in the space below:
 */
 
 const basicCalculator = (num1, num2, operation) => {
+  
+  // ----- set up container values -----
+  let result;
+
+
+
   switch (operation) {
     case 'add':
       return num1 + num2;
-    case 'subtract':
-      return num1 - num2;
-    case 'multiply':
-      return num1 * num2;
-    case 'divide':
-      return num2 !== 0 ? num1 / num2 : 'Cannot divide by zero';
-    default:
-      return 'Invalid operation';
+    
+      case 'subtract':
+        return num1 - num2;
+    
+      case 'multiply':
+        return num1 * num2;
+    
+      case 'divide':
+        return num1 / num2;
+      
+      default:
+        return 'Invalid operation';
   }
 }
 
 console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+console.log('Exercise 9 Result:', basicCalculator(10, 5, "add"));
+console.log('Exercise 9 Result:', basicCalculator(10, 5, "multiply"));
+console.log('Exercise 9 Result:', basicCalculator(10, 5, "divide"));
